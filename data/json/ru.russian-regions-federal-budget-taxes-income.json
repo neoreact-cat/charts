@@ -1,512 +1,512 @@
 [
-    {
-      "Id": 1,
-      "Region": "Белгородская область",
-      "Income": "2 059 948",
-      "DistrictId": 1
-    },
-    {
-      "Id": 2,
-      "Region": "Брянская область",
-      "Income": "1 483 823",
-      "DistrictId": 1
-    },
-    {
-      "Id": 3,
-      "Region": "Владимирская область",
-      "Income": "2 431 789",
-      "DistrictId": 1
-    },
-    {
-      "Id": 4,
-      "Region": "Воронежская область",
-      "Income": "2 114 887",
-      "DistrictId": 1
-    },
-    {
-      "Id": 5,
-      "Region": "Ивановская область",
-      "Income": "753 676",
-      "DistrictId": 1
-    },
-    {
-      "Id": 6,
-      "Region": "Калужская область",
-      "Income": "3 356 061",
-      "DistrictId": 1
-    },
-    {
-      "Id": 7,
-      "Region": "Костромская область",
-      "Income": "730 838",
-      "DistrictId": 1
-    },
-    {
-      "Id": 8,
-      "Region": "Курская область",
-      "Income": "1 920 641",
-      "DistrictId": 1
-    },
-    {
-      "Id": 9,
-      "Region": "Липецкая область",
-      "Income": "-1 750 939",
-      "DistrictId": 1
-    },
-    {
-      "Id": 10,
-      "Region": "Московская область",
-      "Income": "30 472 611",
-      "DistrictId": 1
-    },
-    {
-      "Id": 11,
-      "Region": "Орловская область",
-      "Income": "627 993",
-      "DistrictId": 1
-    },
-    {
-      "Id": 12,
-      "Region": "Рязанская область",
-      "Income": "3 653 134",
-      "DistrictId": 1
-    },
-    {
-      "Id": 13,
-      "Region": "Смоленская область",
-      "Income": "1 690 845",
-      "DistrictId": 1
-    },
-    {
-      "Id": 14,
-      "Region": "Тамбовская область",
-      "Income": "1 268 656",
-      "DistrictId": 1
-    },
-    {
-      "Id": 15,
-      "Region": "Тверская область",
-      "Income": "1 391 496",
-      "DistrictId": 1
-    },
-    {
-      "Id": 16,
-      "Region": "Тульская область",
-      "Income": "277 642",
-      "DistrictId": 1
-    },
-    {
-      "Id": 17,
-      "Region": "Ярославская область",
-      "Income": "12 893 711",
-      "DistrictId": 1
-    },
-    {
-      "Id": 18,
-      "Region": "город Москва",
-      "Income": "102 602 193",
-      "DistrictId": 1
-    },
-    {
-      "Id": 19,
-      "Region": "Республика Карелия",
-      "Income": "318 755",
-      "DistrictId": 2
-    },
-    {
-      "Id": 20,
-      "Region": "Республика Коми",
-      "Income": "10 278 722",
-      "DistrictId": 2
-    },
-    {
-      "Id": 21,
-      "Region": "Архангельская область",
-      "Income": "3 231 871",
-      "DistrictId": 2
-    },
-    {
-      "Id": 22,
-      "Region": "Вологодская область",
-      "Income": "2 275 961",
-      "DistrictId": 2
-    },
-    {
-      "Id": 23,
-      "Region": "Калининградская область",
-      "Income": "9 489 129",
-      "DistrictId": 2
-    },
-    {
-      "Id": 24,
-      "Region": "Ленинградская область",
-      "Income": "59 722 221",
-      "DistrictId": 2
-    },
-    {
-      "Id": 25,
-      "Region": "Мурманская область",
-      "Income": "1 541 937",
-      "DistrictId": 2
-    },
-    {
-      "Id": 26,
-      "Region": "Новгородская область",
-      "Income": "981 132",
-      "DistrictId": 2
-    },
-    {
-      "Id": 27,
-      "Region": "Псковская область",
-      "Income": "389 900",
-      "DistrictId": 2
-    },
-    {
-      "Id": 28,
-      "Region": "город Санкт-Петербург",
-      "Income": "76 128 981",
-      "DistrictId": 2
-    },
-    {
-      "Id": 29,
-      "Region": "Ненецкий АО",
-      "Income": "6 297 349",
-      "DistrictId": 2
-    },
-    {
-      "Id": 30,
-      "Region": "Республика Дагестан",
-      "Income": "911 222",
-      "DistrictId": 3
-    },
-    {
-      "Id": 31,
-      "Region": "Республика Ингушетия",
-      "Income": "69 358",
-      "DistrictId": 3
-    },
-    {
-      "Id": 32,
-      "Region": "Кабардино-Балкарская Республика",
-      "Income": "162 956",
-      "DistrictId": 3
-    },
-    {
-      "Id": 33,
-      "Region": "Карачаево-Черкесская Республика",
-      "Income": "213 021",
-      "DistrictId": 3
-    },
-    {
-      "Id": 34,
-      "Region": "Республика Северная Осетия-Алания",
-      "Income": "469 385",
-      "DistrictId": 3
-    },
-    {
-      "Id": 35,
-      "Region": "Чеченская Республика",
-      "Income": "200 019",
-      "DistrictId": 3
-    },
-    {
-      "Id": 36,
-      "Region": "Ставропольский край",
-      "Income": "3 073 506",
-      "DistrictId": 3
-    },
-    {
-      "Id": 37,
-      "Region": "Республика Адыгея",
-      "Income": "373 618",
-      "DistrictId": 4
-    },
-    {
-      "Id": 38,
-      "Region": "Республика Калмыкия",
-      "Income": "268 401",
-      "DistrictId": 4
-    },
-    {
-      "Id": 39,
-      "Region": "Республика Крым",
-      "Income": "1 749 786",
-      "DistrictId": 4
-    },
-    {
-      "Id": 40,
-      "Region": "Краснодарский край",
-      "Income": "28 025 483",
-      "DistrictId": 4
-    },
-    {
-      "Id": 41,
-      "Region": "Астраханская область",
-      "Income": "7 134 376",
-      "DistrictId": 4
-    },
-    {
-      "Id": 42,
-      "Region": "Волгоградская область",
-      "Income": "16 941 730",
-      "DistrictId": 4
-    },
-    {
-      "Id": 43,
-      "Region": "Ростовская область",
-      "Income": "16 298 665",
-      "DistrictId": 4
-    },
-    {
-      "Id": 44,
-      "Region": "город Севастополь",
-      "Income": "338 213",
-      "DistrictId": 4
-    },
-    {
-      "Id": 45,
-      "Region": "Республика Башкортостан",
-      "Income": "12 250 326",
-      "DistrictId": 5
-    },
-    {
-      "Id": 46,
-      "Region": "Республика Марий-Эл",
-      "Income": "736 008",
-      "DistrictId": 5
-    },
-    {
-      "Id": 47,
-      "Region": "Республика Мордовия",
-      "Income": "1 343 375",
-      "DistrictId": 5
-    },
-    {
-      "Id": 48,
-      "Region": "Республика Татарстан",
-      "Income": "31 467 215",
-      "DistrictId": 5
-    },
-    {
-      "Id": 49,
-      "Region": "Удмуртская Республика",
-      "Income": "9 114 276",
-      "DistrictId": 5
-    },
-    {
-      "Id": 50,
-      "Region": "Чувашская Республика",
-      "Income": "1 095 880",
-      "DistrictId": 5
-    },
-    {
-      "Id": 51,
-      "Region": "Кировская область",
-      "Income": "1 299 095",
-      "DistrictId": 5
-    },
-    {
-      "Id": 52,
-      "Region": "Нижегородская область",
-      "Income": "9 174 771",
-      "DistrictId": 5
-    },
-    {
-      "Id": 53,
-      "Region": "Оренбургская область",
-      "Income": "15 466 969",
-      "DistrictId": 5
-    },
-    {
-      "Id": 54,
-      "Region": "Пензенская область",
-      "Income": "1 655 642",
-      "DistrictId": 5
-    },
-    {
-      "Id": 55,
-      "Region": "Пермский край",
-      "Income": "15 108 047",
-      "DistrictId": 5
-    },
-    {
-      "Id": 56,
-      "Region": "Самарская область",
-      "Income": "18 379 869",
-      "DistrictId": 5
-    },
-    {
-      "Id": 57,
-      "Region": "Саратовская область",
-      "Income": "27 994 855",
-      "DistrictId": 5
-    },
-    {
-      "Id": 58,
-      "Region": "Ульяновская область",
-      "Income": "3 041 733",
-      "DistrictId": 5
-    },
-    {
-      "Id": 59,
-      "Region": "Курганская область",
-      "Income": "613 726",
-      "DistrictId": 6
-    },
-    {
-      "Id": 60,
-      "Region": "Свердловская область",
-      "Income": "8 109 886",
-      "DistrictId": 6
-    },
-    {
-      "Id": 61,
-      "Region": "Тюменская область",
-      "Income": "8 915 242",
-      "DistrictId": 6
-    },
-    {
-      "Id": 62,
-      "Region": "Челябинская область",
-      "Income": "5 204 126",
-      "DistrictId": 6
-    },
-    {
-      "Id": 63,
-      "Region": "Ханты-Мансийский АО - Югра",
-      "Income": "160 303 212",
-      "DistrictId": 6
-    },
-    {
-      "Id": 64,
-      "Region": "Ямало-Hенецкий АО",
-      "Income": "78 523 581",
-      "DistrictId": 6
-    },
-    {
-      "Id": 65,
-      "Region": "Республика Алтай",
-      "Income": "224 045",
-      "DistrictId": 7
-    },
-    {
-      "Id": 66,
-      "Region": "Республика Бурятия",
-      "Income": "397 687",
-      "DistrictId": 7
-    },
-    {
-      "Id": 67,
-      "Region": "Республика Тыва",
-      "Income": "124 803",
-      "DistrictId": 7
-    },
-    {
-      "Id": 68,
-      "Region": "Республика Хакасия",
-      "Income": "212 456",
-      "DistrictId": 7
-    },
-    {
-      "Id": 69,
-      "Region": "Алтайский край",
-      "Income": "2 360 563",
-      "DistrictId": 7
-    },
-    {
-      "Id": 70,
-      "Region": "Красноярский край",
-      "Income": "24 728 335",
-      "DistrictId": 7
-    },
-    {
-      "Id": 71,
-      "Region": "Иркутская область",
-      "Income": "14 413 713",
-      "DistrictId": 7
-    },
-    {
-      "Id": 72,
-      "Region": "Кемеровская область",
-      "Income": "2 219 618",
-      "DistrictId": 7
-    },
-    {
-      "Id": 73,
-      "Region": "Новосибирская область",
-      "Income": "4 568 652",
-      "DistrictId": 7
-    },
-    {
-      "Id": 74,
-      "Region": "Омская область",
-      "Income": "5 652 363",
-      "DistrictId": 7
-    },
-    {
-      "Id": 75,
-      "Region": "Томская область",
-      "Income": "9 675 436",
-      "DistrictId": 7
-    },
-    {
-      "Id": 76,
-      "Region": "Забайкальский край",
-      "Income": "650 016",
-      "DistrictId": 7
-    },
-    {
-      "Id": 77,
-      "Region": "Республика Саха (Якутия)",
-      "Income": "6 612 650",
-      "DistrictId": 8
-    },
-    {
-      "Id": 78,
-      "Region": "Приморский край",
-      "Income": "907 981",
-      "DistrictId": 8
-    },
-    {
-      "Id": 79,
-      "Region": "Хабаровский край",
-      "Income": "2 914 711",
-      "DistrictId": 8
-    },
-    {
-      "Id": 80,
-      "Region": "Амурская область",
-      "Income": "-4 155 437",
-      "DistrictId": 8
-    },
-    {
-      "Id": 81,
-      "Region": "Камчатский край",
-      "Income": "562 811",
-      "DistrictId": 8
-    },
-    {
-      "Id": 82,
-      "Region": "Магаданская область",
-      "Income": "255 056",
-      "DistrictId": 8
-    },
-    {
-      "Id": 83,
-      "Region": "Сахалинская область",
-      "Income": "2 890 448",
-      "DistrictId": 8
-    },
-    {
-      "Id": 84,
-      "Region": "Еврейская автономная область",
-      "Income": "12 364",
-      "DistrictId": 8
-    },
-    {
-      "Id": 85,
-      "Region": "Чукотский АО",
-      "Income": "262 523",
-      "DistrictId": 8
-    }
-  ]
+  {
+    "Id": 1,
+    "Region": "Белгородская область",
+    "Income": 15719030,
+    "DistrictId": 1
+  },
+  {
+    "Id": 2,
+    "Region": "Брянская область",
+    "Income": 12228045,
+    "DistrictId": 1
+  },
+  {
+    "Id": 3,
+    "Region": "Владимирская область",
+    "Income": 18672537,
+    "DistrictId": 1
+  },
+  {
+    "Id": 4,
+    "Region": "Воронежская область",
+    "Income": 15929400,
+    "DistrictId": 1
+  },
+  {
+    "Id": 5,
+    "Region": "Ивановская область",
+    "Income": 4972724,
+    "DistrictId": 1
+  },
+  {
+    "Id": 6,
+    "Region": "Калужская область",
+    "Income": 31158618,
+    "DistrictId": 1
+  },
+  {
+    "Id": 7,
+    "Region": "Костромская область",
+    "Income": 5687590,
+    "DistrictId": 1
+  },
+  {
+    "Id": 8,
+    "Region": "Курская область",
+    "Income": 12442188,
+    "DistrictId": 1
+  },
+  {
+    "Id": 9,
+    "Region": "Липецкая область",
+    "Income": -6154521,
+    "DistrictId": 1
+  },
+  {
+    "Id": 10,
+    "Region": "Московская область",
+    "Income": 233960344,
+    "DistrictId": 1
+  },
+  {
+    "Id": 11,
+    "Region": "Орловская область",
+    "Income": 5224573,
+    "DistrictId": 1
+  },
+  {
+    "Id": 12,
+    "Region": "Рязанская область",
+    "Income": 31954648,
+    "DistrictId": 1
+  },
+  {
+    "Id": 13,
+    "Region": "Смоленская область",
+    "Income": 10878536,
+    "DistrictId": 1
+  },
+  {
+    "Id": 14,
+    "Region": "Тамбовская область",
+    "Income": 3842566,
+    "DistrictId": 1
+  },
+  {
+    "Id": 15,
+    "Region": "Тверская область",
+    "Income": 11696108,
+    "DistrictId": 1
+  },
+  {
+    "Id": 16,
+    "Region": "Тульская область",
+    "Income": 3173878,
+    "DistrictId": 1
+  },
+  {
+    "Id": 17,
+    "Region": "Ярославская область",
+    "Income": 45093893,
+    "DistrictId": 1
+  },
+  {
+    "Id": 18,
+    "Region": "город Москва",
+    "Income": 1016885201,
+    "DistrictId": 1
+  },
+  {
+    "Id": 19,
+    "Region": "Республика Карелия",
+    "Income": 3653543,
+    "DistrictId": 2
+  },
+  {
+    "Id": 20,
+    "Region": "Республика Коми",
+    "Income": 74923816,
+    "DistrictId": 2
+  },
+  {
+    "Id": 21,
+    "Region": "Архангельская область",
+    "Income": 17181571,
+    "DistrictId": 2
+  },
+  {
+    "Id": 22,
+    "Region": "Вологодская область",
+    "Income": 10582899,
+    "DistrictId": 2
+  },
+  {
+    "Id": 23,
+    "Region": "Калининградская область",
+    "Income": 59033129,
+    "DistrictId": 2
+  },
+  {
+    "Id": 24,
+    "Region": "Ленинградская область",
+    "Income": 136633153,
+    "DistrictId": 2
+  },
+  {
+    "Id": 25,
+    "Region": "Мурманская область",
+    "Income": 12231071,
+    "DistrictId": 2
+  },
+  {
+    "Id": 26,
+    "Region": "Новгородская область",
+    "Income": 1356249,
+    "DistrictId": 2
+  },
+  {
+    "Id": 27,
+    "Region": "Псковская область",
+    "Income": 2482774,
+    "DistrictId": 2
+  },
+  {
+    "Id": 28,
+    "Region": "город Санкт-Петербург",
+    "Income": 486343250,
+    "DistrictId": 2
+  },
+  {
+    "Id": 29,
+    "Region": "Ненецкий АО",
+    "Income": 35421800,
+    "DistrictId": 2
+  },
+  {
+    "Id": 30,
+    "Region": "Республика Дагестан",
+    "Income": 6151612,
+    "DistrictId": 3
+  },
+  {
+    "Id": 31,
+    "Region": "Республика Ингушетия",
+    "Income": 438055,
+    "DistrictId": 3
+  },
+  {
+    "Id": 32,
+    "Region": "Кабардино-Балкарская Республика",
+    "Income": 1593803,
+    "DistrictId": 3
+  },
+  {
+    "Id": 33,
+    "Region": "Карачаево-Черкесская Республика",
+    "Income": 2596870,
+    "DistrictId": 3
+  },
+  {
+    "Id": 34,
+    "Region": "Республика Северная Осетия-Алания",
+    "Income": 3276590,
+    "DistrictId": 3
+  },
+  {
+    "Id": 35,
+    "Region": "Чеченская Республика",
+    "Income": 995730,
+    "DistrictId": 3
+  },
+  {
+    "Id": 36,
+    "Region": "Ставропольский край",
+    "Income": 23477047,
+    "DistrictId": 3
+  },
+  {
+    "Id": 37,
+    "Region": "Республика Адыгея",
+    "Income": 3513913,
+    "DistrictId": 4
+  },
+  {
+    "Id": 38,
+    "Region": "Республика Калмыкия",
+    "Income": 1904695,
+    "DistrictId": 4
+  },
+  {
+    "Id": 39,
+    "Region": "Республика Крым",
+    "Income": 14071772,
+    "DistrictId": 4
+  },
+  {
+    "Id": 40,
+    "Region": "Краснодарский край",
+    "Income": 86911467,
+    "DistrictId": 4
+  },
+  {
+    "Id": 41,
+    "Region": "Астраханская область",
+    "Income": 50522398,
+    "DistrictId": 4
+  },
+  {
+    "Id": 42,
+    "Region": "Волгоградская область",
+    "Income": 52157637,
+    "DistrictId": 4
+  },
+  {
+    "Id": 43,
+    "Region": "Ростовская область",
+    "Income": 51445552,
+    "DistrictId": 4
+  },
+  {
+    "Id": 44,
+    "Region": "город Севастополь",
+    "Income": 2819883,
+    "DistrictId": 4
+  },
+  {
+    "Id": 45,
+    "Region": "Республика Башкортостан",
+    "Income": 122171652,
+    "DistrictId": 5
+  },
+  {
+    "Id": 46,
+    "Region": "Республика Марий-Эл",
+    "Income": 6890477,
+    "DistrictId": 5
+  },
+  {
+    "Id": 47,
+    "Region": "Республика Мордовия",
+    "Income": 10539494,
+    "DistrictId": 5
+  },
+  {
+    "Id": 48,
+    "Region": "Республика Татарстан",
+    "Income": 250735770,
+    "DistrictId": 5
+  },
+  {
+    "Id": 49,
+    "Region": "Удмуртская Республика",
+    "Income": 81374739,
+    "DistrictId": 5
+  },
+  {
+    "Id": 50,
+    "Region": "Чувашская Республика",
+    "Income": 10764794,
+    "DistrictId": 5
+  },
+  {
+    "Id": 51,
+    "Region": "Кировская область",
+    "Income": 9934882,
+    "DistrictId": 5
+  },
+  {
+    "Id": 52,
+    "Region": "Нижегородская область",
+    "Income": 81222157,
+    "DistrictId": 5
+  },
+  {
+    "Id": 53,
+    "Region": "Оренбургская область",
+    "Income": 139565615,
+    "DistrictId": 5
+  },
+  {
+    "Id": 54,
+    "Region": "Пензенская область",
+    "Income": 11902000,
+    "DistrictId": 5
+  },
+  {
+    "Id": 55,
+    "Region": "Пермский край",
+    "Income": 132813604,
+    "DistrictId": 5
+  },
+  {
+    "Id": 56,
+    "Region": "Самарская область",
+    "Income": 174459944,
+    "DistrictId": 5
+  },
+  {
+    "Id": 57,
+    "Region": "Саратовская область",
+    "Income": 71460334,
+    "DistrictId": 5
+  },
+  {
+    "Id": 58,
+    "Region": "Ульяновская область",
+    "Income": 24124272,
+    "DistrictId": 5
+  },
+  {
+    "Id": 59,
+    "Region": "Курганская область",
+    "Income": 7060380,
+    "DistrictId": 6
+  },
+  {
+    "Id": 60,
+    "Region": "Свердловская область",
+    "Income": 72280358,
+    "DistrictId": 6
+  },
+  {
+    "Id": 61,
+    "Region": "Тюменская область",
+    "Income": 95625382,
+    "DistrictId": 6
+  },
+  {
+    "Id": 62,
+    "Region": "Челябинская область",
+    "Income": 57094320,
+    "DistrictId": 6
+  },
+  {
+    "Id": 63,
+    "Region": "Ханты-Мансийский АО - Югра",
+    "Income": 1422127286,
+    "DistrictId": 6
+  },
+  {
+    "Id": 64,
+    "Region": "Ямало-Hенецкий АО",
+    "Income": 665597779,
+    "DistrictId": 6
+  },
+  {
+    "Id": 65,
+    "Region": "Республика Алтай",
+    "Income": 1724411,
+    "DistrictId": 7
+  },
+  {
+    "Id": 66,
+    "Region": "Республика Бурятия",
+    "Income": 1154733,
+    "DistrictId": 7
+  },
+  {
+    "Id": 67,
+    "Region": "Республика Тыва",
+    "Income": 634328,
+    "DistrictId": 7
+  },
+  {
+    "Id": 68,
+    "Region": "Республика Хакасия",
+    "Income": 1964902,
+    "DistrictId": 7
+  },
+  {
+    "Id": 69,
+    "Region": "Алтайский край",
+    "Income": 17826861,
+    "DistrictId": 7
+  },
+  {
+    "Id": 70,
+    "Region": "Красноярский край",
+    "Income": 194258765,
+    "DistrictId": 7
+  },
+  {
+    "Id": 71,
+    "Region": "Иркутская область",
+    "Income": 131930101,
+    "DistrictId": 7
+  },
+  {
+    "Id": 72,
+    "Region": "Кемеровская область",
+    "Income": 24907026,
+    "DistrictId": 7
+  },
+  {
+    "Id": 73,
+    "Region": "Новосибирская область",
+    "Income": 38472128,
+    "DistrictId": 7
+  },
+  {
+    "Id": 74,
+    "Region": "Омская область",
+    "Income": 52524102,
+    "DistrictId": 7
+  },
+  {
+    "Id": 75,
+    "Region": "Томская область",
+    "Income": 89464552,
+    "DistrictId": 7
+  },
+  {
+    "Id": 76,
+    "Region": "Забайкальский край",
+    "Income": 445561,
+    "DistrictId": 7
+  },
+  {
+    "Id": 77,
+    "Region": "Республика Саха (Якутия)",
+    "Income": 111747354,
+    "DistrictId": 8
+  },
+  {
+    "Id": 78,
+    "Region": "Приморский край",
+    "Income": 50361465,
+    "DistrictId": 8
+  },
+  {
+    "Id": 79,
+    "Region": "Хабаровский край",
+    "Income": 11172443,
+    "DistrictId": 8
+  },
+  {
+    "Id": 80,
+    "Region": "Амурская область",
+    "Income": 21813549,
+    "DistrictId": 8
+  },
+  {
+    "Id": 81,
+    "Region": "Камчатский край",
+    "Income": -12993494,
+    "DistrictId": 8
+  },
+  {
+    "Id": 82,
+    "Region": "Магаданская область",
+    "Income": 2995251,
+    "DistrictId": 8
+  },
+  {
+    "Id": 83,
+    "Region": "Сахалинская область",
+    "Income": -4943076,
+    "DistrictId": 8
+  },
+  {
+    "Id": 84,
+    "Region": "Еврейская автономная область",
+    "Income": 42678298,
+    "DistrictId": 8
+  },
+  {
+    "Id": 85,
+    "Region": "Чукотский АО",
+    "Income": -202908,
+    "DistrictId": 8
+  }
+]

@@ -1,0 +1,342 @@
+[
+    {
+        "DistrictId": 1,
+        "Location": "Belgorod Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Bryansk Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Vladimir Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Voronezh Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Ivanovo Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Kaluga Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Kostroma Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Kursk Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Lipetsk Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Moscow Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Oryol Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Ryazan Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Smolensk Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Tambov Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Tver Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Tula Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Yaroslavl Oblast"
+    },
+    {
+        "DistrictId": 1,
+        "Location": "Moscow"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Republic of Karelia"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Komi Republic"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Arkhangelsk Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Vologda Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Kaliningrad Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Leningrad Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Murmansk Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Novgorod Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Pskov Oblast"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Saint Petersburg"
+    },
+    {
+        "DistrictId": 2,
+        "Location": "Nenets Autonomous Okrug"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Dagestan Republic"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Ingushetia"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Kabardino-Balkaria"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Karachay-Cherkessia"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "North Ossetia–Alania"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Chechnya"
+    },
+    {
+        "DistrictId": 3,
+        "Location": "Stavropol Krai"
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Adygea"
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Kalmykia"
+    },
+    {
+        "DistrictId": 4,
+        "Location": ""
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Krasnodar Krai"
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Astrakhan Oblast"
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Volgograd Oblast"
+    },
+    {
+        "DistrictId": 4,
+        "Location": "Rostov Oblast"
+    },
+    {
+        "DistrictId": 4,
+        "Location": ""
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Republic of Bashkortostan"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Mari El Republic"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Mordovia"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Tatarstan"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Udmurt Republic"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Chuvashia Republic"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Kirov Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Nizhny Novgorod Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Orenburg Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Penza Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Perm Krai"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Samara Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Saratov Oblast"
+    },
+    {
+        "DistrictId": 5,
+        "Location": "Ulyanovsk Oblast"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Kurgan Oblast"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Sverdlovsk Oblast"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Tyumen Oblast"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Chelyabinsk Oblast"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Khanty-Mansi Autonomous Okrug"
+    },
+    {
+        "DistrictId": 6,
+        "Location": "Yamalo-Nenets Autonomous Okrug"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Altai Republic"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Buryatia"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Tuva"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Republic of Khakassia"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Altai Krai"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Krasnoyarsk Krai"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Irkutsk Oblast"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Kemerovo Oblast"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Novosibirsk Oblast"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Omsk Oblast"
+    },
+    {
+        "DistrictId": 7,
+        "Location": "Tomsk Oblast"
+    },
+    {
+        "DistrictId": 7,
+        "Location": ""
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Sakha Republic"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Primorsky Krai"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Khabarovsk Krai"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Amur Oblast"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Kamchatka Krai"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Magadan Oblast"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Sakhalin Oblast"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Jewish Autonomous Oblast"
+    },
+    {
+        "DistrictId": 8,
+        "Location": "Chukotka Autonomous Okrug"
+    }
+]

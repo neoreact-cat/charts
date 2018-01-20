@@ -6,7 +6,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
             google.charts.load('current', {
-                'packages':['table', 'corechart', 'bar'],
+                'packages':['table', 'corechart', 'bar', 'geochart'],
                 'mapsApiKey': 'AIzaSyD-I3nnBs9JANZDMRpjjfPjzizh1VklxYI'
             });
 
@@ -41,21 +41,43 @@
                         var regionsTable = drawRegionsTable(json)
                         var regionsIncomePie = drawRegionsIncomePie(json)
                         var regionsPopulationPie = drawRegionsPopulationPie(json)
-                        var regionsPopulationIncomeColumnt = drawRegionsPopulationIncomeColumns(json)
+                        var regionsPopulationIncomeColumn = drawRegionsPopulationIncomeColumns(json)
+                        var regionsIncomeGeo = drawRegionsIncomeGeo(json)
+                        var regionsPopulationGeo = drawRegionsPopulationGeo(json)
 
                         google.visualization.events.addListener(regionsTable, 'select', function (e) {
                             regionsIncomePie.setSelection(regionsTable.getSelection());
                             regionsPopulationPie.setSelection(regionsTable.getSelection());
+                            regionsIncomeGeo.setSelection(regionsTable.getSelection());
+                            regionsPopulationGeo.setSelection(regionsTable.getSelection());
                         });
 
                         google.visualization.events.addListener(regionsIncomePie, 'select', function (e) {
                             regionsTable.setSelection(regionsIncomePie.getSelection());
                             regionsPopulationPie.setSelection(regionsIncomePie.getSelection());
+                            regionsIncomeGeo.setSelection(regionsIncomePie.getSelection());
+                            regionsPopulationGeo.setSelection(regionsIncomePie.getSelection());
                         });
 
                         google.visualization.events.addListener(regionsPopulationPie, 'select', function (e) {
                             regionsTable.setSelection(regionsPopulationPie.getSelection());
                             regionsIncomePie.setSelection(regionsPopulationPie.getSelection());
+                            regionsIncomeGeo.setSelection(regionsPopulationPie.getSelection());
+                            regionsPopulationGeo.setSelection(regionsPopulationPie.getSelection());
+                        });
+
+                        google.visualization.events.addListener(regionsIncomeGeo, 'select', function (e) {
+                            regionsTable.setSelection(regionsIncomeGeo.getSelection());
+                            regionsIncomePie.setSelection(regionsIncomeGeo.getSelection());
+                            regionsPopulationPie.setSelection(regionsIncomeGeo.getSelection());
+                            regionsPopulationGeo.setSelection(regionsIncomeGeo.getSelection());
+                        });
+
+                        google.visualization.events.addListener(regionsPopulationGeo, 'select', function (e) {
+                            regionsTable.setSelection(regionsPopulationGeo.getSelection());
+                            regionsIncomePie.setSelection(regionsPopulationGeo.getSelection());
+                            regionsPopulationPie.setSelection(regionsPopulationGeo.getSelection());
+                            regionsIncomeGeo.setSelection(regionsPopulationPie.getSelection());
                         });
                     }})
             });
@@ -123,8 +145,8 @@
                 var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
                 json.Regions.forEach(item => { data.addRow([getRegion(item), 
                     item.Population / populationPersent, 
-                    (item.Income >= 0 ? item.Income : 0) / incomePersent,
-                    (incomePersent >= 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
+                    (incomePersent > 0 ? (item.Income / incomePersent) : 0),
+                    (incomePersent > 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
                 data.sort({column: 3, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
@@ -144,6 +166,42 @@
                 return bar
             }
 
+            function drawRegionsIncomeGeo(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)    
+                data.addColumn('number', strings.Income)
+
+                json.Regions.forEach(item => { data.addRow([ {v: item.ISO3166Location, f: getRegion(item) }, item.Income ]) }); 
+                data.sort({column: 1, desc: true}); 
+
+                var geo = new google.visualization.GeoChart(document.getElementById('regions_income_geo_div'));
+
+                geo.draw(data, { dataMode: 'regions', displayMode: 'regions', region: 'RU', resolution: 'provinces',
+                    width: 1200, height:800 });
+
+                return geo
+            }
+
+            function drawRegionsPopulationGeo(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)    
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+
+                json.Regions.forEach(item => { data.addRow([ {v: item.ISO3166Location, f: getRegion(item) }, item.Population, item.Income ]) }); 
+                data.sort({column: 2, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1])
+
+                var geo = new google.visualization.GeoChart(document.getElementById('regions_population_geo_div'));
+
+                geo.draw(view, { dataMode: 'regions', displayMode: 'regions', region: 'RU', resolution: 'provinces',
+                    width: 1200, height:800 });
+
+                return geo
+            }
+
         </script>
     </head>
     <body>
@@ -153,7 +211,15 @@
                     <div id="regions_population_chart_div">
                 </td>
                 <td>
+                    <div id="regions_population_geo_div"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <div id="regions_income_chart_div">
+                </td>
+                <td>
+                    <div id="regions_income_geo_div"/>
                 </td>
             </tr>
             <tr>

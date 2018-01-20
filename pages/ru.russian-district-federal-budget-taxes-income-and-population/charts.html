@@ -10,6 +10,28 @@
                 'mapsApiKey': 'AIzaSyD-I3nnBs9JANZDMRpjjfPjzizh1VklxYI'
             });
 
+            var lang = window.location.hash ? window.location.hash : '#en'
+            var strings = { }
+            if (lang == '#en') {
+                strings.District = 'District'
+                strings.Population = 'Population'
+                strings.Income = 'Federal Tax Income'
+                strings.Ratio = 'Ratio'
+                strings.PopulationAndIncome = 'Population and Federal Tax Income'
+                strings.Share = '% of the total'
+            } else if (lang == '#ru') {
+                strings.District = 'Федеральный округ'
+                strings.Population = 'Численность населения'
+                strings.Income = 'Налоги в федеральный бюджет'
+                strings.Ratio = 'Соотношение'
+                strings.PopulationAndIncome = 'Численность населения и налоги в федеральный бюджет'
+                strings.Share = '% от общего количества'
+            }
+            var getDistrict = function(item) {
+                if (lang == '#en') { return item.DistrictEn }
+                else if (lang == "#ru") { return item.DistrictRu }
+            }
+
             google.charts.setOnLoadCallback(function () {
                 var jsonData = $.ajax({
                     url: "https://neoreact-cat.github.io/charts/pages/ru.russian-district-federal-budget-taxes-income-and-population/data.json",
@@ -19,7 +41,7 @@
                         var districtsTable = drawDistrictsTable(json)
                         var districtsIncomePie = drawDistrictsIncomePie(json)
                         var districtsPopulationPie = drawDistrictsPopulationPie(json)
-                        var districtsPopulationIncomeColumnt = frawDistrictsPopulationIncomeColumns(json)
+                        var districtsPopulationIncomeColumnt = drawDistrictsPopulationIncomeColumns(json)
 
                         google.visualization.events.addListener(districtsTable, 'select', function (e) {
                             districtsIncomePie.setSelection(districtsTable.getSelection());
@@ -40,81 +62,81 @@
 
             function drawDistrictsTable(json) {
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Численность населения')
-                data.addColumn('number', 'Налоги в федеральный бюджет')
-                data.addColumn('number', 'Долевой коэффциент')
+                data.addColumn('string', strings.District)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+                data.addColumn('number', strings.Ratio)
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome / 100
-                json.Districts.forEach(item => { data.addRow([item.District, item.Income, item.Population,
+                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population, item.Income * 1000,
                     (item.Income / incomePersent) / (item.Population / populationPersent)]) });
-                data.sort({column: 3, desc: true}); 
+                data.sort({column: 2, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
-                view.setColumns([0,1,2])
+                view.setColumns([0,1,2,3])
 
                 var table = new google.visualization.Table(document.getElementById('districts_table_div'));
-                table.draw(view, { showRowNumber: true, width: '100%', height: '100%'})
+                table.draw(view, { showRowNumber: true, width: '100%', height: '100%', sort: 'disable'})
 
                 return table
             }
 
             function drawDistrictsIncomePie(json) {
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Налоги в федеральный бюджет')
+                data.addColumn('string', strings.District)
+                data.addColumn('number', strings.Income)
 
-                json.Districts.forEach(item => { data.addRow([item.District, item.Income]) });
+                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Income * 1000]) });
                 data.sort({column: 1, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_income_chart_div'));
-                chart.draw(data, {  title: 'Налоги в федеральный бюджет', pieHole: 0, width: '600', height: '600', legend: 'none' });
+                chart.draw(data, {  title: strings.Income, pieHole: 0, width: '600', height: '600', legend: 'none' });
 
                 return chart
             }
 
             function drawDistrictsPopulationPie(json) {
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Численность населения')
-                data.addColumn('number', 'Налоги в федеральный бюджет')
+                data.addColumn('string', strings.District)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
 
-                json.Districts.forEach(item => { data.addRow([item.District, item.Population, item.Income]) });
+                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population, item.Income]) });
                 data.sort({column: 2, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_population_chart_div'));
                 
-                chart.draw(data, { title: 'Численность населения', pieHole: 0, width: '600', height: '600', legend: 'none' });
+                chart.draw(data, { title: strings.Population, pieHole: 0, width: '600', height: '600', legend: 'none' });
 
                 return chart
             }
 
-            function frawDistrictsPopulationIncomeColumns(json) {
+            function drawDistrictsPopulationIncomeColumns(json) {
                 var data = new google.visualization.DataTable();
-                data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Численность населения')
-                data.addColumn('number', 'Налоги в федеральный бюджет')
-                data.addColumn('number', 'Долевой коэффциент')
+                data.addColumn('string', strings.District)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+                data.addColumn('number', strings.Ratio)
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome / 100
-                json.Districts.forEach(item => { data.addRow([item.District, item.Population / populationPersent, item.Income / incomePersent,
+                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population / populationPersent, item.Income / incomePersent,
                      (item.Income / incomePersent) / (item.Population / populationPersent)]) });
                 data.sort({column: 3, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
-                view.setColumns([0,1,2])
+                view.setColumns([0,1,2,3])
 
                 var bar = new google.visualization.ColumnChart(document.getElementById('districts_population_income_columns'));
-                bar.draw(view, { title: 'Численность населения и налоги в федеральный бюджет', width:1200, height:800,
+                bar.draw(view, { title: strings.PopulationAndIncome, width:1200, height:800,
                     orientation: 'vertical', 
                     legend: {position: 'top'},
                     hAxis: {
-                        title: '% от общего количества'
+                        title: strings.Share
                     },
                     vAxis: {
-                        title: 'Федеральный округ'
+                        title: strings.District
                     } });
 
                 return bar
@@ -125,16 +147,16 @@
     <body>
         <table>
             <tr>
-                <td colspan="2">
-                    <div id="districts_table_div">
-                </td>
-            </tr>
-            <tr>
                 <td>
                     <div id="districts_population_chart_div">
                 </td>
                 <td>
                     <div id="districts_income_chart_div">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="districts_table_div">
                 </td>
             </tr>
             <tr>

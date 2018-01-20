@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru-RU">
+    <head>
+        <link href="https://neoreact-cat.github.io/charts/favicon.ico" rel="icon" type="image/x-icon" />
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            google.charts.load('current', {
+                'packages':['table', 'corechart', 'bar'],
+                'mapsApiKey': 'AIzaSyD-I3nnBs9JANZDMRpjjfPjzizh1VklxYI'
+            });
+
+            var lang = window.location.hash ? window.location.hash : '#en'
+            var strings = { }
+            if (lang == '#en') {
+                strings.Region =  'Region'
+                strings.Population = 'Population'
+                strings.Income = 'Federal Tax Income'
+                strings.Ratio = 'Ratio'
+                strings.PopulationAndIncome = 'Population and Federal Tax Income'
+                strings.Share = '% of the total'
+            } else if (lang == '#ru') {
+                strings.Region = 'Регион'
+                strings.Population = 'Численность населения'
+                strings.Income = 'Налоги в федеральный бюджет'
+                strings.Ratio = 'Соотношение'
+                strings.PopulationAndIncome = 'Численность населения и налоги в федеральный бюджет'
+                strings.Share = '% от общего количества'
+            }
+            var getRegion = function(item) {
+                if (lang == '#en') { return item.RegionEn }
+                else if (lang == "#ru") { return item.RegionRu }
+            }
+
+            google.charts.setOnLoadCallback(function () {
+                var jsonData = $.ajax({
+                    url: "https://neoreact-cat.github.io/charts/pages/ru.russian-regions-federal-budget-taxes-income-and-population/data.json",
+                    dataType: "json",
+                    async: true,
+                    success: function(json){
+                        var regionsTable = drawRegionsTable(json)
+                        var regionsIncomePie = drawRegionsIncomePie(json)
+                        var regionsPopulationPie = drawRegionsPopulationPie(json)
+                        var regionsPopulationIncomeColumnt = drawRegionsPopulationIncomeColumns(json)
+
+                        google.visualization.events.addListener(regionsTable, 'select', function (e) {
+                            regionsIncomePie.setSelection(regionsTable.getSelection());
+                            regionsPopulationPie.setSelection(regionsTable.getSelection());
+                        });
+
+                        google.visualization.events.addListener(regionsIncomePie, 'select', function (e) {
+                            regionsTable.setSelection(regionsIncomePie.getSelection());
+                            regionsPopulationPie.setSelection(regionsIncomePie.getSelection());
+                        });
+
+                        google.visualization.events.addListener(regionsPopulationPie, 'select', function (e) {
+                            regionsTable.setSelection(regionsPopulationPie.getSelection());
+                            regionsIncomePie.setSelection(regionsPopulationPie.getSelection());
+                        });
+                    }})
+            });
+
+            function drawRegionsTable(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+                data.addColumn('number', strings.Ratio)
+
+                var populationPersent = json.TotalPopulation / 100
+                var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
+                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Population, item.Income * 1000,
+                    (incomePersent >= 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
+                data.sort({column: 2, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2,3])
+
+                var table = new google.visualization.Table(document.getElementById('regions_table_div'));
+                table.draw(view, { showRowNumber: true, width: '100%', height: '100%', sort: 'disable'})
+
+                return table
+            }
+
+            function drawRegionsIncomePie(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)
+                data.addColumn('number', strings.Income)
+
+                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Income >= 0 ? item.Income * 1000 : 0 ]) });
+                data.sort({column: 1, desc: true}); 
+
+                var chart = new google.visualization.PieChart(document.getElementById('regions_income_chart_div'));
+                chart.draw(data, {  title: strings.Income, pieHole: 0, width: '600', height: '600', legend: 'none' });
+
+                return chart
+            }
+
+            function drawRegionsPopulationPie(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+
+                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Population, item.Income]) });
+                data.sort({column: 2, desc: true}); 
+
+                var chart = new google.visualization.PieChart(document.getElementById('regions_population_chart_div'));
+                
+                chart.draw(data, { title: strings.Population, pieHole: 0, width: '600', height: '600', legend: 'none' });
+
+                return chart
+            }
+
+            function drawRegionsPopulationIncomeColumns(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.Income)
+                data.addColumn('number', strings.Ratio)
+
+                var populationPersent = json.TotalPopulation / 100
+                var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
+                json.Regions.forEach(item => { data.addRow([getRegion(item), 
+                    item.Population / populationPersent, 
+                    (item.Income >= 0 ? item.Income : 0) / incomePersent,
+                    (incomePersent >= 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
+                data.sort({column: 3, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2,3])
+
+                var bar = new google.visualization.ColumnChart(document.getElementById('regions_population_income_columns'));
+                bar.draw(view, { title: strings.PopulationAndIncome, width:1600, height:4000,
+                    orientation: 'vertical', 
+                    legend: {position: 'top'},
+                    hAxis: {
+                        title: strings.Share
+                    },
+                    vAxis: {
+                        title: strings.Region
+                    } });
+
+                return bar
+            }
+
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    <div id="regions_population_chart_div">
+                </td>
+                <td>
+                    <div id="regions_income_chart_div">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="regions_table_div">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="regions_population_income_columns"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

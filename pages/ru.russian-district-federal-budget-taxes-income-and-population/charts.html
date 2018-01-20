@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="ru-RU">
     <head>
-        <link href="/charts/favicon.ico" rel="icon" type="image/x-icon" />
+        <link href="https://neoreact-cat.github.io/charts/favicon.ico" rel="icon" type="image/x-icon" />
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
             google.charts.load('current', {
-                'packages':['table', 'corechart', 'sankey'],
+                'packages':['table', 'corechart', 'bar'],
                 'mapsApiKey': 'AIzaSyD-I3nnBs9JANZDMRpjjfPjzizh1VklxYI'
             });
 
@@ -19,6 +19,7 @@
                         var districtsTable = drawDistrictsTable(json)
                         var districtsIncomePie = drawDistrictsIncomePie(json)
                         var districtsPopulationPie = drawDistrictsPopulationPie(json)
+                        var districtsPopulationIncomeColumnt = frawDistrictsPopulationIncomeColumns(json)
 
                         google.visualization.events.addListener(districtsTable, 'select', function (e) {
                             districtsIncomePie.setSelection(districtsTable.getSelection());
@@ -40,15 +41,21 @@
             function drawDistrictsTable(json) {
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Доход в федеральный бюджет')
                 data.addColumn('number', 'Численность населения')
+                data.addColumn('number', 'Налоги в федеральный бюджет')
+                data.addColumn('number', 'Долевой коэффциент')
 
-                json.forEach(item => { data.addRow([item.District, item.Income, item.Population]) });
-                data.sort({column: 1, desc: true}); 
+                var populationPersent = json.TotalPopulation / 100
+                var incomePersent = json.TotalIncome / 100
+                json.Districts.forEach(item => { data.addRow([item.District, item.Income, item.Population,
+                    (item.Income / incomePersent) / (item.Population / populationPersent)]) });
+                data.sort({column: 3, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2])
 
                 var table = new google.visualization.Table(document.getElementById('districts_table_div'));
-                
-                table.draw(data, {showRowNumber: true, width: '100%', height: '100%'})
+                table.draw(view, { showRowNumber: true, width: '100%', height: '100%'})
 
                 return table
             }
@@ -56,13 +63,13 @@
             function drawDistrictsIncomePie(json) {
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Федеральный округ')
-                data.addColumn('number', 'Доход в федеральный бюджет')
+                data.addColumn('number', 'Налоги в федеральный бюджет')
 
-                json.forEach(item => { data.addRow([item.District, item.Income]) });
+                json.Districts.forEach(item => { data.addRow([item.District, item.Income]) });
                 data.sort({column: 1, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_income_chart_div'));
-                chart.draw(data, {  title: 'Доход в федеральный бюджет', pieHole: 0, width: '600', height: '600', legend: 'none', });
+                chart.draw(data, {  title: 'Налоги в федеральный бюджет', pieHole: 0, width: '600', height: '600', legend: 'none' });
 
                 return chart
             }
@@ -71,15 +78,46 @@
                 var data = new google.visualization.DataTable();
                 data.addColumn('string', 'Федеральный округ')
                 data.addColumn('number', 'Численность населения')
-                data.addColumn('number', 'Доход в федеральный бюджет')
+                data.addColumn('number', 'Налоги в федеральный бюджет')
 
-                json.forEach(item => { data.addRow([item.District, item.Population, item.Income]) });
+                json.Districts.forEach(item => { data.addRow([item.District, item.Population, item.Income]) });
                 data.sort({column: 2, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_population_chart_div'));
-                chart.draw(data, { title: 'Численность населения', pieHole: 0, width: '600', height: '600', legend: 'none', view: {columns: [0, 1]} });
+                
+                chart.draw(data, { title: 'Численность населения', pieHole: 0, width: '600', height: '600', legend: 'none' });
 
                 return chart
+            }
+
+            function frawDistrictsPopulationIncomeColumns(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Федеральный округ')
+                data.addColumn('number', 'Численность населения')
+                data.addColumn('number', 'Налоги в федеральный бюджет')
+                data.addColumn('number', 'Долевой коэффциент')
+
+                var populationPersent = json.TotalPopulation / 100
+                var incomePersent = json.TotalIncome / 100
+                json.Districts.forEach(item => { data.addRow([item.District, item.Population / populationPersent, item.Income / incomePersent,
+                     (item.Income / incomePersent) / (item.Population / populationPersent)]) });
+                data.sort({column: 3, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2])
+
+                var bar = new google.visualization.ColumnChart(document.getElementById('districts_population_income_columns'));
+                bar.draw(view, { title: 'Численность населения и налоги в федеральный бюджет', width:1200, height:800,
+                    orientation: 'vertical', 
+                    legend: {position: 'top'},
+                    hAxis: {
+                        title: '% от общего количества'
+                    },
+                    vAxis: {
+                        title: 'Федеральный округ'
+                    } });
+
+                return bar
             }
 
         </script>
@@ -93,10 +131,15 @@
             </tr>
             <tr>
                 <td>
-                    <div id="districts_income_chart_div">
+                    <div id="districts_population_chart_div">
                 </td>
                 <td>
-                    <div id="districts_population_chart_div">
+                    <div id="districts_income_chart_div">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div id="districts_population_income_columns"/>
                 </td>
             </tr>
         </table>

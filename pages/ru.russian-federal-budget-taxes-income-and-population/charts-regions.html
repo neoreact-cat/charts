@@ -34,7 +34,7 @@
 
             google.charts.setOnLoadCallback(function () {
                 var jsonData = $.ajax({
-                    url: "https://neoreact-cat.github.io/charts/pages/ru.russian-regions-federal-budget-taxes-income-and-population/data.json",
+                    url: "https://neoreact-cat.github.io/charts/pages/ru.russian-federal-budget-taxes-income-and-population/data.json",
                     dataType: "json",
                     async: true,
                     success: function(json){
@@ -91,8 +91,11 @@
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
-                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Population, item.Income * 1000,
-                    (incomePersent >= 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([getRegion(r), r.Population, r.Income * 1000,
+                        (incomePersent >= 0 ? (r.Income / incomePersent) : 0) / (r.Population / populationPersent)]) });
+                })
+
                 data.sort({column: 2, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
@@ -109,7 +112,9 @@
                 data.addColumn('string', strings.Region)
                 data.addColumn('number', strings.Income)
 
-                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Income >= 0 ? item.Income * 1000 : 0 ]) });
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([getRegion(r), r.Income >= 0 ? r.Income * 1000 : 0 ]) });
+                })
                 data.sort({column: 1, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('regions_income_chart_div'));
@@ -124,7 +129,9 @@
                 data.addColumn('number', strings.Population)
                 data.addColumn('number', strings.Income)
 
-                json.Regions.forEach(item => { data.addRow([getRegion(item), item.Population, item.Income]) });
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([getRegion(r), r.Population, r.Income]) });
+                })
                 data.sort({column: 2, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('regions_population_chart_div'));
@@ -143,10 +150,12 @@
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
-                json.Regions.forEach(item => { data.addRow([getRegion(item), 
-                    item.Population / populationPersent, 
-                    (incomePersent > 0 ? (item.Income / incomePersent) : 0),
-                    (incomePersent > 0 ? (item.Income / incomePersent) : 0) / (item.Population / populationPersent)]) });
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([getRegion(r), 
+                        r.Population / populationPersent, 
+                        (incomePersent > 0 ? (r.Income / incomePersent) : 0),
+                        (incomePersent > 0 ? (r.Income / incomePersent) : 0) / (r.Population / populationPersent)]) });
+                })
                 data.sort({column: 3, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
@@ -171,7 +180,9 @@
                 data.addColumn('string', strings.Region)    
                 data.addColumn('number', strings.Income)
 
-                json.Regions.forEach(item => { data.addRow([ {v: item.ISO3166Location, f: getRegion(item) }, item.Income ]) }); 
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([ {v: r.ISO3166Location, f: getRegion(r) }, r.Income ]) }); 
+                })
                 data.sort({column: 1, desc: true}); 
 
                 var geo = new google.visualization.GeoChart(document.getElementById('regions_income_geo_div'));
@@ -188,7 +199,9 @@
                 data.addColumn('number', strings.Population)
                 data.addColumn('number', strings.Income)
 
-                json.Regions.forEach(item => { data.addRow([ {v: item.ISO3166Location, f: getRegion(item) }, item.Population, item.Income ]) }); 
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([ {v: r.ISO3166Location, f: getRegion(r) }, r.Population, r.Income ]) }); 
+                })
                 data.sort({column: 2, desc: true}); 
 
                 var view = new google.visualization.DataView(data);

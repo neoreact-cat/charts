@@ -6,7 +6,7 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script type="text/javascript">
             google.charts.load('current', {
-                'packages':['table', 'corechart', 'bar'],
+                'packages':['table', 'corechart', 'bar', 'geochart'],
                 'mapsApiKey': 'AIzaSyD-I3nnBs9JANZDMRpjjfPjzizh1VklxYI'
             });
 
@@ -15,26 +15,34 @@
             if (lang == '#en') {
                 strings.District = 'District'
                 strings.Population = 'Population'
+                strings.PopulationPercent = 'Population (%)'
                 strings.Income = 'Federal Tax Income'
+                strings.IncomePercent = 'Federal Tax Income (%)'
                 strings.Ratio = 'Ratio'
                 strings.PopulationAndIncome = 'Population and Federal Tax Income'
                 strings.Share = '% of the total'
             } else if (lang == '#ru') {
                 strings.District = 'Федеральный округ'
                 strings.Population = 'Численность населения'
+                strings.PopulationPercent = 'Численность населения (%)'
                 strings.Income = 'Налоги в федеральный бюджет'
+                strings.IncomePercent = 'Налоги в федеральный бюджет (%)'
                 strings.Ratio = 'Соотношение'
                 strings.PopulationAndIncome = 'Численность населения и налоги в федеральный бюджет'
                 strings.Share = '% от общего количества'
             }
-            var getDistrict = function(item) {
-                if (lang == '#en') { return item.DistrictEn }
-                else if (lang == "#ru") { return item.DistrictRu }
+            var getDistrict = function(d) {
+                if (lang == '#en') { return d.DistrictEn }
+                else if (lang == "#ru") { return d.DistrictRu }
+            }
+            var getRegion = function(r) {
+                if (lang == '#en') { return r.RegionEn }
+                else if (lang == "#ru") { return r.RegionRu }
             }
 
             google.charts.setOnLoadCallback(function () {
                 var jsonData = $.ajax({
-                    url: "https://neoreact-cat.github.io/charts/pages/ru.russian-district-federal-budget-taxes-income-and-population/data.json",
+                    url: "https://neoreact-cat.github.io/charts/pages/ru.russian-federal-budget-taxes-income-and-population/data.json",
                     dataType: "json",
                     async: true,
                     success: function(json){
@@ -42,6 +50,8 @@
                         var districtsIncomePie = drawDistrictsIncomePie(json)
                         var districtsPopulationPie = drawDistrictsPopulationPie(json)
                         var districtsPopulationIncomeColumnt = drawDistrictsPopulationIncomeColumns(json)
+                        var districtsPopulationGeo = drawDistrictsPopulationGeo(json)
+                        var districtsIncomeGeo = drawDistrictsIncomeGeo(json)
 
                         google.visualization.events.addListener(districtsTable, 'select', function (e) {
                             districtsIncomePie.setSelection(districtsTable.getSelection());
@@ -69,8 +79,12 @@
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome / 100
-                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population, item.Income * 1000,
-                    (item.Income / incomePersent) / (item.Population / populationPersent)]) });
+                json.Districts.forEach(d => { data.addRow([
+                    getDistrict(d), 
+                    d.Population, 
+                    d.Income * 1000,
+                    (d.Income / incomePersent) / (d.Population / populationPersent)
+                ]) });
                 data.sort({column: 2, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
@@ -87,7 +101,10 @@
                 data.addColumn('string', strings.District)
                 data.addColumn('number', strings.Income)
 
-                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Income * 1000]) });
+                json.Districts.forEach(d => { data.addRow([
+                    getDistrict(d), 
+                    d.Income * 1000
+                ]) });
                 data.sort({column: 1, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_income_chart_div'));
@@ -102,7 +119,11 @@
                 data.addColumn('number', strings.Population)
                 data.addColumn('number', strings.Income)
 
-                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population, item.Income]) });
+                json.Districts.forEach(d => { data.addRow([
+                    getDistrict(d), 
+                    d.Population, 
+                    d.Income
+                ]) });
                 data.sort({column: 2, desc: true}); 
 
                 var chart = new google.visualization.PieChart(document.getElementById('districts_population_chart_div'));
@@ -121,8 +142,12 @@
 
                 var populationPersent = json.TotalPopulation / 100
                 var incomePersent = json.TotalIncome / 100
-                json.Districts.forEach(item => { data.addRow([getDistrict(item), item.Population / populationPersent, item.Income / incomePersent,
-                     (item.Income / incomePersent) / (item.Population / populationPersent)]) });
+                json.Districts.forEach(d => { data.addRow([
+                    getDistrict(d), 
+                    d.Population / populationPersent, 
+                    d.Income / incomePersent,
+                     (d.Income / incomePersent) / (d.Population / populationPersent)
+                ]) });
                 data.sort({column: 3, desc: true}); 
 
                 var view = new google.visualization.DataView(data);
@@ -142,6 +167,62 @@
                 return bar
             }
 
+            function drawDistrictsPopulationGeo(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)    
+                data.addColumn('number', strings.Population)
+                data.addColumn('number', strings.PopulationPercent)
+
+                var populationPersent = json.TotalPopulation / 100
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([ 
+                        {v: r.ISO3166Location, f: getDistrict(d) }, 
+                        d.Population,
+                        (d.Population / populationPersent)
+                    ]) }); 
+                })
+                data.sort({column: 1, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2])
+
+                var geo = new google.visualization.GeoChart(document.getElementById('districts_population_geo_div'));
+
+                geo.draw(view, { dataMode: 'regions', displayMode: 'regions', region: 'RU', resolution: 'provinces',
+                    width: 1200, height:800 });
+
+                return geo
+            }
+
+            function drawDistrictsIncomeGeo(json) {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', strings.Region)    
+                data.addColumn('number', strings.Income)
+                data.addColumn('number', strings.IncomePercent)
+
+                var incomePersent = json.TotalIncome / 100
+                json.Districts.forEach(d => {
+                    d.Regions.forEach(r => { data.addRow([ 
+                        {v: r.ISO3166Location, f: getDistrict(d) }, 
+                        d.Income,
+                        (d.Income / incomePersent)
+                    ]) }); 
+                })
+                data.sort({column: 1, desc: true}); 
+
+                var view = new google.visualization.DataView(data);
+                view.setColumns([0,1,2])
+
+                var geo = new google.visualization.GeoChart(document.getElementById('districts_income_geo_div'));
+
+                geo.draw(view, { dataMode: 'regions', displayMode: 'regions', region: 'RU', resolution: 'provinces',
+                    width: 1200, height:800 });
+
+                return geo
+            }
+
+            
+
         </script>
     </head>
     <body>
@@ -151,7 +232,15 @@
                     <div id="districts_population_chart_div">
                 </td>
                 <td>
+                    <div id="districts_population_geo_div"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
                     <div id="districts_income_chart_div">
+                </td>
+                <td>
+                    <div id="districts_income_geo_div"/>
                 </td>
             </tr>
             <tr>

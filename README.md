@@ -2,9 +2,9 @@
 
 The composition of interconnected charts linking Russian budget taxes income from federal districts and regions with population.
 
-### [Open charts by District](https://neoreact-cat.github.io/charts/pages/ru.russian-district-federal-budget-taxes-income-and-population/charts.html)
+### [Open charts by District](https://neoreact-cat.github.io/charts/pages/ru.russian-federal-budget-taxes-income-and-population/charts-districts.html)
 
-### [Open charts by Region](https://neoreact-cat.github.io/charts/pages/ru.russian-regions-federal-budget-taxes-income-and-population/charts.html)
+### [Open charts by Region](https://neoreact-cat.github.io/charts/pages/ru.russian-federal-budget-taxes-income-and-population/charts-regions.html)
 
 #### Sources:
 

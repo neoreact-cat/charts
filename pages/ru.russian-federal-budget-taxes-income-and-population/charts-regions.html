@@ -27,9 +27,9 @@
                 strings.PopulationAndIncome = 'Численность населения и налоги в федеральный бюджет'
                 strings.Share = '% от общего количества'
             }
-            var getRegion = function(item) {
-                if (lang == '#en') { return item.RegionEn }
-                else if (lang == "#ru") { return item.RegionRu }
+            var getRegion = function(r) {
+                if (lang == '#en') { return r.RegionEn }
+                else if (lang == "#ru") { return r.RegionRu }
             }
 
             google.charts.setOnLoadCallback(function () {
@@ -89,7 +89,7 @@
                 data.addColumn('number', strings.Income)
                 data.addColumn('number', strings.Ratio)
 
-                var populationPersent = json.TotalPopulation / 100
+                var populationPersent = json.Population / 100
                 var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
                 json.Districts.forEach(d => {
                     d.Regions.forEach(r => { data.addRow([getRegion(r), r.Population, r.Income * 1000,
@@ -148,7 +148,7 @@
                 data.addColumn('number', strings.Income)
                 data.addColumn('number', strings.Ratio)
 
-                var populationPersent = json.TotalPopulation / 100
+                var populationPersent = json.Population / 100
                 var incomePersent = json.TotalIncome >= 0 ? (json.TotalIncome / 100) : 0
                 json.Districts.forEach(d => {
                     d.Regions.forEach(r => { data.addRow([getRegion(r), 

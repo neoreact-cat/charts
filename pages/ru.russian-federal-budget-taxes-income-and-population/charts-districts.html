@@ -77,7 +77,7 @@
                 data.addColumn('number', strings.Income)
                 data.addColumn('number', strings.Ratio)
 
-                var populationPersent = json.TotalPopulation / 100
+                var populationPersent = json.Population / 100
                 var incomePersent = json.TotalIncome / 100
                 json.Districts.forEach(d => { data.addRow([
                     getDistrict(d), 
@@ -140,7 +140,7 @@
                 data.addColumn('number', strings.Income)
                 data.addColumn('number', strings.Ratio)
 
-                var populationPersent = json.TotalPopulation / 100
+                var populationPersent = json.Population / 100
                 var incomePersent = json.TotalIncome / 100
                 json.Districts.forEach(d => { data.addRow([
                     getDistrict(d), 
@@ -173,7 +173,7 @@
                 data.addColumn('number', strings.Population)
                 data.addColumn('number', strings.PopulationPercent)
 
-                var populationPersent = json.TotalPopulation / 100
+                var populationPersent = json.Population / 100
                 json.Districts.forEach(d => {
                     d.Regions.forEach(r => { data.addRow([ 
                         {v: r.ISO3166Location, f: getDistrict(d) }, 

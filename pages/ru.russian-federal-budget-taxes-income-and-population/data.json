@@ -1,6 +1,8 @@
 {
-  "TotalIncome": 6729885700,
-  "TotalPopulation": 146270033,
+  "Income": 6729885700,
+  "Population": 146270033,
+  "PopulationUrban": 108286570,
+  "PopulationRural": 37983463,
   "Districts": [
     {
       "Id": 1,
@@ -8,6 +10,8 @@
       "DistrictEn": "Central Federal District",
       "Income": 1473365358,
       "Population": 38944837,
+      "PopulationUrban": 31871860,
+      "PopulationRural": 7072977,
       "Regions": [
         {
           "Id": 1,
@@ -15,7 +19,10 @@
           "RegionRu": "Белгородская область",
           "RegionEn": "Belgorod Oblast",
           "Income": 15719030,
-          "Population": 1547845
+          "Population": 1547845,
+          "PopulationUrban": 1035892,
+          "PopulationRural": 511953,
+          "DistrictId": 1
         },
         {
           "Id": 2,
@@ -23,7 +30,10 @@
           "RegionRu": "Брянская область",
           "RegionEn": "Bryansk Oblast",
           "Income": 12228045,
-          "Population": 1232885
+          "Population": 1232885,
+          "PopulationUrban": 860200,
+          "PopulationRural": 372685,
+          "DistrictId": 1
         },
         {
           "Id": 3,
@@ -31,7 +41,10 @@
           "RegionRu": "Владимирская область",
           "RegionEn": "Vladimir Oblast",
           "Income": 18672537,
-          "Population": 1405741
+          "Population": 1405741,
+          "PopulationUrban": 1093838,
+          "PopulationRural": 311903,
+          "DistrictId": 1
         },
         {
           "Id": 4,
@@ -39,7 +52,10 @@
           "RegionRu": "Воронежская область",
           "RegionEn": "Voronezh Oblast",
           "Income": 15929400,
-          "Population": 2331511
+          "Population": 2331511,
+          "PopulationUrban": 1560149,
+          "PopulationRural": 771362,
+          "DistrictId": 1
         },
         {
           "Id": 5,
@@ -47,7 +63,10 @@
           "RegionRu": "Ивановская область",
           "RegionEn": "Ivanovo Oblast",
           "Income": 4972724,
-          "Population": 1037079
+          "Population": 1037079,
+          "PopulationUrban": 842605,
+          "PopulationRural": 194474,
+          "DistrictId": 1
         },
         {
           "Id": 6,
@@ -55,7 +74,10 @@
           "RegionRu": "Калужская область",
           "RegionEn": "Kaluga Oblast",
           "Income": 31158618,
-          "Population": 1009709
+          "Population": 1009709,
+          "PopulationUrban": 769574,
+          "PopulationRural": 240135,
+          "DistrictId": 1
         },
         {
           "Id": 7,
@@ -63,7 +85,10 @@
           "RegionRu": "Костромская область",
           "RegionEn": "Kostroma Oblast",
           "Income": 5687590,
-          "Population": 654230
+          "Population": 654230,
+          "PopulationUrban": 466198,
+          "PopulationRural": 188032,
+          "DistrictId": 1
         },
         {
           "Id": 8,
@@ -71,7 +96,10 @@
           "RegionRu": "Курская область",
           "RegionEn": "Kursk Oblast",
           "Income": 12442188,
-          "Population": 1117397
+          "Population": 1117397,
+          "PopulationUrban": 747293,
+          "PopulationRural": 370104,
+          "DistrictId": 1
         },
         {
           "Id": 9,
@@ -79,7 +107,10 @@
           "RegionRu": "Липецкая область",
           "RegionEn": "Lipetsk Oblast",
           "Income": -6154521,
-          "Population": 1158280
+          "Population": 1158280,
+          "PopulationUrban": 744047,
+          "PopulationRural": 414233,
+          "DistrictId": 1
         },
         {
           "Id": 10,
@@ -87,7 +118,10 @@
           "RegionRu": "Московская область",
           "RegionEn": "Moscow Oblast",
           "Income": 233960344,
-          "Population": 7236604
+          "Population": 7236604,
+          "PopulationUrban": 5905082,
+          "PopulationRural": 1331522,
+          "DistrictId": 1
         },
         {
           "Id": 11,
@@ -95,7 +129,10 @@
           "RegionRu": "Орловская область",
           "RegionEn": "Oryol Oblast",
           "Income": 5224573,
-          "Population": 766152
+          "Population": 766152,
+          "PopulationUrban": 508278,
+          "PopulationRural": 257874,
+          "DistrictId": 1
         },
         {
           "Id": 12,
@@ -103,7 +140,10 @@
           "RegionRu": "Рязанская область",
           "RegionEn": "Ryazan Oblast",
           "Income": 31954648,
-          "Population": 1135916
+          "Population": 1135916,
+          "PopulationUrban": 809426,
+          "PopulationRural": 326490,
+          "DistrictId": 1
         },
         {
           "Id": 13,
@@ -111,7 +151,10 @@
           "RegionRu": "Смоленская область",
           "RegionEn": "Smolensk Oblast",
           "Income": 10878536,
-          "Population": 964333
+          "Population": 964333,
+          "PopulationUrban": 694027,
+          "PopulationRural": 270306,
+          "DistrictId": 1
         },
         {
           "Id": 14,
@@ -119,7 +162,10 @@
           "RegionRu": "Тамбовская область",
           "RegionEn": "Tambov Oblast",
           "Income": 3842566,
-          "Population": 1062500
+          "Population": 1062500,
+          "PopulationUrban": 635097,
+          "PopulationRural": 427403,
+          "DistrictId": 1
         },
         {
           "Id": 15,
@@ -127,7 +173,10 @@
           "RegionRu": "Тверская область",
           "RegionEn": "Tver Oblast",
           "Income": 11696108,
-          "Population": 1315432
+          "Population": 1315432,
+          "PopulationUrban": 989064,
+          "PopulationRural": 326368,
+          "DistrictId": 1
         },
         {
           "Id": 16,
@@ -135,7 +184,10 @@
           "RegionRu": "Тульская область",
           "RegionEn": "Tula Oblast",
           "Income": 3173878,
-          "Population": 1513166
+          "Population": 1513166,
+          "PopulationUrban": 1130715,
+          "PopulationRural": 382451,
+          "DistrictId": 1
         },
         {
           "Id": 17,
@@ -143,7 +195,10 @@
           "RegionRu": "Ярославская область",
           "RegionEn": "Yaroslavl Oblast",
           "Income": 45093893,
-          "Population": 1272042
+          "Population": 1272042,
+          "PopulationUrban": 1039861,
+          "PopulationRural": 232181,
+          "DistrictId": 1
         },
         {
           "Id": 18,
@@ -151,7 +206,10 @@
           "RegionRu": "город Москва",
           "RegionEn": "Moscow",
           "Income": 1016885201,
-          "Population": 12184015
+          "Population": 12184015,
+          "PopulationUrban": 12040514,
+          "PopulationRural": 143501,
+          "DistrictId": 1
         }
       ]
     },
@@ -161,6 +219,8 @@
       "DistrictEn": "Northwestern Federal District",
       "Income": 839843255,
       "Population": 13847170,
+      "PopulationUrban": 11644096,
+      "PopulationRural": 2203074,
       "Regions": [
         {
           "Id": 19,
@@ -168,7 +228,10 @@
           "RegionRu": "Республика Карелия",
           "RegionEn": "Republic of Karelia",
           "Income": 3653543,
-          "Population": 632696
+          "Population": 632696,
+          "PopulationUrban": 503606,
+          "PopulationRural": 129090,
+          "DistrictId": 2
         },
         {
           "Id": 20,
@@ -176,7 +239,10 @@
           "RegionRu": "Республика Коми",
           "RegionEn": "Komi Republic",
           "Income": 74923816,
-          "Population": 864238
+          "Population": 864238,
+          "PopulationUrban": 671270,
+          "PopulationRural": 192968,
+          "DistrictId": 2
         },
         {
           "Id": 21,
@@ -184,7 +250,10 @@
           "RegionRu": "Архангельская область",
           "RegionEn": "Arkhangelsk Oblast",
           "Income": 17181571,
-          "Population": 1140109
+          "Population": 1140109,
+          "PopulationUrban": 879962,
+          "PopulationRural": 260147,
+          "DistrictId": 2
         },
         {
           "Id": 22,
@@ -192,7 +261,10 @@
           "RegionRu": "Вологодская область",
           "RegionEn": "Vologda Oblast",
           "Income": 10582899,
-          "Population": 1191009
+          "Population": 1191009,
+          "PopulationUrban": 856583,
+          "PopulationRural": 334426,
+          "DistrictId": 2
         },
         {
           "Id": 23,
@@ -200,7 +272,10 @@
           "RegionRu": "Калининградская область",
           "RegionEn": "Kaliningrad Oblast",
           "Income": 59033129,
-          "Population": 968256
+          "Population": 968256,
+          "PopulationUrban": 752199,
+          "PopulationRural": 216057,
+          "DistrictId": 2
         },
         {
           "Id": 24,
@@ -208,7 +283,10 @@
           "RegionRu": "Ленинградская область",
           "RegionEn": "Leningrad Oblast",
           "Income": 136633153,
-          "Population": 1774015
+          "Population": 1774015,
+          "PopulationUrban": 1145520,
+          "PopulationRural": 628495,
+          "DistrictId": 2
         },
         {
           "Id": 25,
@@ -216,7 +294,10 @@
           "RegionRu": "Мурманская область",
           "RegionEn": "Murmansk Oblast",
           "Income": 12231071,
-          "Population": 766440
+          "Population": 766440,
+          "PopulationUrban": 709758,
+          "PopulationRural": 56682,
+          "DistrictId": 2
         },
         {
           "Id": 26,
@@ -224,7 +305,10 @@
           "RegionRu": "Новгородская область",
           "RegionEn": "Novgorod Oblast",
           "Income": 1356249,
-          "Population": 618696
+          "Population": 618696,
+          "PopulationUrban": 438340,
+          "PopulationRural": 180356,
+          "DistrictId": 2
         },
         {
           "Id": 27,
@@ -232,7 +316,10 @@
           "RegionRu": "Псковская область",
           "RegionEn": "Pskov Oblast",
           "Income": 2482774,
-          "Population": 651205
+          "Population": 651205,
+          "PopulationUrban": 458592,
+          "PopulationRural": 192613,
+          "DistrictId": 2
         },
         {
           "Id": 28,
@@ -240,7 +327,10 @@
           "RegionRu": "город Санкт-Петербург",
           "RegionEn": "Saint Petersburg",
           "Income": 486343250,
-          "Population": 5197114
+          "Population": 5197114,
+          "PopulationUrban": 5197114,
+          "PopulationRural": "-",
+          "DistrictId": 2
         },
         {
           "Id": 29,
@@ -248,7 +338,10 @@
           "RegionRu": "Ненецкий АО",
           "RegionEn": "Nenets Autonomous Okrug",
           "Income": 35421800,
-          "Population": 43392
+          "Population": 43392,
+          "PopulationUrban": 31152,
+          "PopulationRural": 12240,
+          "DistrictId": 2
         }
       ]
     },
@@ -258,6 +351,8 @@
       "DistrictEn": "North Caucasian Federal District",
       "Income": 38529707,
       "Population": 9659070,
+      "PopulationUrban": 4743225,
+      "PopulationRural": 4915845,
       "Regions": [
         {
           "Id": 30,
@@ -265,7 +360,10 @@
           "RegionRu": "Республика Дагестан",
           "RegionEn": "Dagestan Republic",
           "Income": 6151612,
-          "Population": 2990288
+          "Population": 2990288,
+          "PopulationUrban": 1348309,
+          "PopulationRural": 1641979,
+          "DistrictId": 3
         },
         {
           "Id": 31,
@@ -273,7 +371,10 @@
           "RegionRu": "Республика Ингушетия",
           "RegionEn": "Ingushetia",
           "Income": 438055,
-          "Population": 463408
+          "Population": 463408,
+          "PopulationUrban": 188781,
+          "PopulationRural": 274627,
+          "DistrictId": 3
         },
         {
           "Id": 32,
@@ -281,7 +382,10 @@
           "RegionRu": "Кабардино-Балкарская Республика",
           "RegionEn": "Kabardino-Balkaria",
           "Income": 1593803,
-          "Population": 860808
+          "Population": 860808,
+          "PopulationUrban": 449824,
+          "PopulationRural": 410984,
+          "DistrictId": 3
         },
         {
           "Id": 33,
@@ -289,7 +393,10 @@
           "RegionRu": "Карачаево-Черкесская Республика",
           "RegionEn": "Karachay-Cherkessia",
           "Income": 2596870,
-          "Population": 469253
+          "Population": 469253,
+          "PopulationUrban": 200215,
+          "PopulationRural": 269038,
+          "DistrictId": 3
         },
         {
           "Id": 34,
@@ -297,7 +404,10 @@
           "RegionRu": "Республика Северная Осетия-Алания",
           "RegionEn": "North Ossetia–Alania",
           "Income": 3276590,
-          "Population": 705236
+          "Population": 705236,
+          "PopulationUrban": 451890,
+          "PopulationRural": 253346,
+          "DistrictId": 3
         },
         {
           "Id": 35,
@@ -305,7 +415,10 @@
           "RegionRu": "Чеченская Республика",
           "RegionEn": "Chechnya",
           "Income": 995730,
-          "Population": 1370173
+          "Population": 1370173,
+          "PopulationUrban": 476373,
+          "PopulationRural": 893800,
+          "DistrictId": 3
         },
         {
           "Id": 36,
@@ -313,7 +426,10 @@
           "RegionRu": "Ставропольский край",
           "RegionEn": "Stavropol Krai",
           "Income": 23477047,
-          "Population": 2799904
+          "Population": 2799904,
+          "PopulationUrban": 1627833,
+          "PopulationRural": 1172071,
+          "DistrictId": 3
         }
       ]
     },
@@ -323,6 +439,8 @@
       "DistrictEn": "Southern Federal District",
       "Income": 263347317,
       "Population": 16299651,
+      "PopulationUrban": 10131433,
+      "PopulationRural": 6168218,
       "Regions": [
         {
           "Id": 37,
@@ -330,7 +448,10 @@
           "RegionRu": "Республика Адыгея",
           "RegionEn": "Adygea",
           "Income": 3513913,
-          "Population": 449160
+          "Population": 449160,
+          "PopulationUrban": 211683,
+          "PopulationRural": 237477,
+          "DistrictId": 4
         },
         {
           "Id": 38,
@@ -338,7 +459,10 @@
           "RegionRu": "Республика Калмыкия",
           "RegionEn": "Kalmykia",
           "Income": 1904695,
-          "Population": 280581
+          "Population": 280581,
+          "PopulationUrban": 126682,
+          "PopulationRural": 153899,
+          "DistrictId": 4
         },
         {
           "Id": 39,
@@ -346,7 +470,10 @@
           "RegionRu": "Краснодарский край",
           "RegionEn": "Krasnodar Krai",
           "Income": 86911467,
-          "Population": 5453908
+          "Population": 5453908,
+          "PopulationUrban": 2945829,
+          "PopulationRural": 2508079,
+          "DistrictId": 4
         },
         {
           "Id": 40,
@@ -354,7 +481,10 @@
           "RegionRu": "Астраханская область",
           "RegionEn": "Astrakhan Oblast",
           "Income": 50522398,
-          "Population": 1021942
+          "Population": 1021942,
+          "PopulationUrban": 679775,
+          "PopulationRural": 342167,
+          "DistrictId": 4
         },
         {
           "Id": 41,
@@ -362,7 +492,10 @@
           "RegionRu": "Волгоградская область",
           "RegionEn": "Volgograd Oblast",
           "Income": 52157637,
-          "Population": 2557689
+          "Population": 2557689,
+          "PopulationUrban": 1957419,
+          "PopulationRural": 600270,
+          "DistrictId": 4
         },
         {
           "Id": 42,
@@ -370,7 +503,10 @@
           "RegionRu": "Ростовская область",
           "RegionEn": "Rostov Oblast",
           "Income": 51445552,
-          "Population": 4242261
+          "Population": 4242261,
+          "PopulationUrban": 2879363,
+          "PopulationRural": 1362898,
+          "DistrictId": 4
         },
         {
           "Id": 43,
@@ -378,7 +514,10 @@
           "RegionRu": "город Севастополь",
           "RegionEn": "Sevastopol",
           "Income": 2819883,
-          "Population": 400865
+          "Population": 400865,
+          "PopulationUrban": 370661,
+          "PopulationRural": 30204,
+          "DistrictId": 4
         },
         {
           "Id": 44,
@@ -386,7 +525,10 @@
           "RegionRu": "Республика Крым",
           "RegionEn": "Republic of Crimea",
           "Income": 14071772,
-          "Population": 1893245
+          "Population": 1893245,
+          "PopulationUrban": 960021,
+          "PopulationRural": 933224,
+          "DistrictId": 4
         }
       ]
     },
@@ -396,6 +538,8 @@
       "DistrictEn": "Volga Federal District",
       "Income": 1127959734,
       "Population": 29717813,
+      "PopulationUrban": 21236020,
+      "PopulationRural": 8481793,
       "Regions": [
         {
           "Id": 45,
@@ -403,7 +547,10 @@
           "RegionRu": "Республика Башкортостан",
           "RegionEn": "Republic of Bashkortostan",
           "Income": 122171652,
-          "Population": 4071617
+          "Population": 4071617,
+          "PopulationUrban": 2512623,
+          "PopulationRural": 1558994,
+          "DistrictId": 5
         },
         {
           "Id": 46,
@@ -411,7 +558,10 @@
           "RegionRu": "Республика Марий-Эл",
           "RegionEn": "Mari El Republic",
           "Income": 6890477,
-          "Population": 687587
+          "Population": 687587,
+          "PopulationUrban": 448223,
+          "PopulationRural": 239364,
+          "DistrictId": 5
         },
         {
           "Id": 47,
@@ -419,7 +569,10 @@
           "RegionRu": "Республика Мордовия",
           "RegionEn": "Mordovia",
           "Income": 10539494,
-          "Population": 809465
+          "Population": 809465,
+          "PopulationUrban": 495658,
+          "PopulationRural": 313807,
+          "DistrictId": 5
         },
         {
           "Id": 48,
@@ -427,7 +580,10 @@
           "RegionRu": "Республика Татарстан",
           "RegionEn": "Tatarstan",
           "Income": 250735770,
-          "Population": 3855258
+          "Population": 3855258,
+          "PopulationUrban": 2940242,
+          "PopulationRural": 915016,
+          "DistrictId": 5
         },
         {
           "Id": 49,
@@ -435,7 +591,10 @@
           "RegionRu": "Удмуртская Республика",
           "RegionEn": "Udmurt Republic",
           "Income": 81374739,
-          "Population": 1517294
+          "Population": 1517294,
+          "PopulationUrban": 994038,
+          "PopulationRural": 523256,
+          "DistrictId": 5
         },
         {
           "Id": 50,
@@ -443,7 +602,10 @@
           "RegionRu": "Чувашская Республика",
           "RegionEn": "Chuvashia Republic",
           "Income": 10764794,
-          "Population": 1238233
+          "Population": 1238233,
+          "PopulationUrban": 751698,
+          "PopulationRural": 486535,
+          "DistrictId": 5
         },
         {
           "Id": 51,
@@ -451,7 +613,10 @@
           "RegionRu": "Кировская область",
           "RegionEn": "Kirov Oblast",
           "Income": 9934882,
-          "Population": 1304766
+          "Population": 1304766,
+          "PopulationUrban": 986173,
+          "PopulationRural": 318593,
+          "DistrictId": 5
         },
         {
           "Id": 52,
@@ -459,7 +624,10 @@
           "RegionRu": "Нижегородская область",
           "RegionEn": "Nizhny Novgorod Oblast",
           "Income": 81222157,
-          "Population": 3270585
+          "Population": 3270585,
+          "PopulationUrban": 2596584,
+          "PopulationRural": 674001,
+          "DistrictId": 5
         },
         {
           "Id": 53,
@@ -467,7 +635,10 @@
           "RegionRu": "Оренбургская область",
           "RegionEn": "Orenburg Oblast",
           "Income": 139565615,
-          "Population": 2001357
+          "Population": 2001357,
+          "PopulationUrban": 1198791,
+          "PopulationRural": 802566,
+          "DistrictId": 5
         },
         {
           "Id": 54,
@@ -475,7 +646,10 @@
           "RegionRu": "Пензенская область",
           "RegionEn": "Penza Oblast",
           "Income": 11902000,
-          "Population": 1356119
+          "Population": 1356119,
+          "PopulationUrban": 924010,
+          "PopulationRural": 432109,
+          "DistrictId": 5
         },
         {
           "Id": 55,
@@ -483,7 +657,10 @@
           "RegionRu": "Пермский край",
           "RegionEn": "Perm Krai",
           "Income": 132813604,
-          "Population": 2637733
+          "Population": 2637733,
+          "PopulationUrban": 1992913,
+          "PopulationRural": 644820,
+          "DistrictId": 5
         },
         {
           "Id": 56,
@@ -491,7 +668,10 @@
           "RegionRu": "Самарская область",
           "RegionEn": "Samara Oblast",
           "Income": 174459944,
-          "Population": 3211578
+          "Population": 3211578,
+          "PopulationUrban": 2579247,
+          "PopulationRural": 632331,
+          "DistrictId": 5
         },
         {
           "Id": 57,
@@ -499,7 +679,10 @@
           "RegionRu": "Саратовская область",
           "RegionEn": "Saratov Oblast",
           "Income": 71460334,
-          "Population": 2493597
+          "Population": 2493597,
+          "PopulationUrban": 1875373,
+          "PopulationRural": 618224,
+          "DistrictId": 5
         },
         {
           "Id": 58,
@@ -507,7 +690,10 @@
           "RegionRu": "Ульяновская область",
           "RegionEn": "Ulyanovsk Oblast",
           "Income": 24124272,
-          "Population": 1262624
+          "Population": 1262624,
+          "PopulationUrban": 940447,
+          "PopulationRural": 322177,
+          "DistrictId": 5
         }
       ]
     },
@@ -517,6 +703,8 @@
       "DistrictEn": "Ural Federal District",
       "Income": 2319785505,
       "Population": 12276228,
+      "PopulationUrban": 9934314,
+      "PopulationRural": 2341914,
       "Regions": [
         {
           "Id": 59,
@@ -524,7 +712,10 @@
           "RegionRu": "Курганская область",
           "RegionEn": "Kurgan Oblast",
           "Income": 7060380,
-          "Population": 869717
+          "Population": 869717,
+          "PopulationUrban": 535385,
+          "PopulationRural": 334332,
+          "DistrictId": 6
         },
         {
           "Id": 60,
@@ -532,7 +723,10 @@
           "RegionRu": "Свердловская область",
           "RegionEn": "Sverdlovsk Oblast",
           "Income": 72280358,
-          "Population": 4327611
+          "Population": 4327611,
+          "PopulationUrban": 3649471,
+          "PopulationRural": 678140,
+          "DistrictId": 6
         },
         {
           "Id": 61,
@@ -540,7 +734,10 @@
           "RegionRu": "Тюменская область",
           "RegionEn": "Tyumen Oblast",
           "Income": 95625382,
-          "Population": 1429250
+          "Population": 1429250,
+          "PopulationUrban": 924393,
+          "PopulationRural": 504857,
+          "DistrictId": 6
         },
         {
           "Id": 62,
@@ -548,7 +745,10 @@
           "RegionRu": "Челябинская область",
           "RegionEn": "Chelyabinsk Oblast",
           "Income": 57094320,
-          "Population": 3496334
+          "Population": 3496334,
+          "PopulationUrban": 2885549,
+          "PopulationRural": 610785,
+          "DistrictId": 6
         },
         {
           "Id": 63,
@@ -556,7 +756,10 @@
           "RegionRu": "Ханты-Мансийский АО - Югра",
           "RegionEn": "Khanty-Mansi Autonomous Okrug",
           "Income": 1422127286,
-          "Population": 1613363
+          "Population": 1613363,
+          "PopulationUrban": 1486845,
+          "PopulationRural": 126518,
+          "DistrictId": 6
         },
         {
           "Id": 64,
@@ -564,7 +767,10 @@
           "RegionRu": "Ямало-Hенецкий АО",
           "RegionEn": "Yamalo-Nenets Autonomous Okrug",
           "Income": 665597779,
-          "Population": 539953
+          "Population": 539953,
+          "PopulationUrban": 452671,
+          "PopulationRural": 87282,
+          "DistrictId": 6
         }
       ]
     },
@@ -574,6 +780,8 @@
       "DistrictEn": "Siberian Federal District",
       "Income": 555307470,
       "Population": 19313880,
+      "PopulationUrban": 14039862,
+      "PopulationRural": 5274018,
       "Regions": [
         {
           "Id": 65,
@@ -581,7 +789,10 @@
           "RegionRu": "Республика Алтай",
           "RegionEn": "Altai Republic",
           "Income": 1724411,
-          "Population": 213544
+          "Population": 213544,
+          "PopulationUrban": 62278,
+          "PopulationRural": 151266,
+          "DistrictId": 7
         },
         {
           "Id": 66,
@@ -589,7 +800,10 @@
           "RegionRu": "Республика Бурятия",
           "RegionEn": "Buryatia",
           "Income": 1154733,
-          "Population": 978625
+          "Population": 978625,
+          "PopulationUrban": 576410,
+          "PopulationRural": 402215,
+          "DistrictId": 7
         },
         {
           "Id": 67,
@@ -597,7 +811,10 @@
           "RegionRu": "Республика Тыва",
           "RegionEn": "Tuva",
           "Income": 634328,
-          "Population": 313612
+          "Population": 313612,
+          "PopulationUrban": 169129,
+          "PopulationRural": 144483,
+          "DistrictId": 7
         },
         {
           "Id": 68,
@@ -605,7 +822,10 @@
           "RegionRu": "Республика Хакасия",
           "RegionEn": "Republic of Khakassia",
           "Income": 1964902,
-          "Population": 535647
+          "Population": 535647,
+          "PopulationUrban": 367079,
+          "PopulationRural": 168568,
+          "DistrictId": 7
         },
         {
           "Id": 69,
@@ -613,7 +833,10 @@
           "RegionRu": "Алтайский край",
           "RegionEn": "Altai Krai",
           "Income": 17826861,
-          "Population": 535647
+          "Population": 2384708,
+          "PopulationUrban": 1335981,
+          "PopulationRural": 1048727,
+          "DistrictId": 7
         },
         {
           "Id": 70,
@@ -621,7 +844,10 @@
           "RegionRu": "Красноярский край",
           "RegionEn": "Krasnoyarsk Krai",
           "Income": 194258765,
-          "Population": 2859777
+          "Population": 2859777,
+          "PopulationUrban": 2195184,
+          "PopulationRural": 664593,
+          "DistrictId": 7
         },
         {
           "Id": 71,
@@ -629,7 +855,10 @@
           "RegionRu": "Иркутская область",
           "RegionEn": "Irkutsk Oblast",
           "Income": 131930101,
-          "Population": 2415695
+          "Population": 2415695,
+          "PopulationUrban": 1907358,
+          "PopulationRural": 508337,
+          "DistrictId": 7
         },
         {
           "Id": 72,
@@ -637,7 +866,10 @@
           "RegionRu": "Кемеровская область",
           "RegionEn": "Kemerovo Oblast",
           "Income": 24907026,
-          "Population": 2725257
+          "Population": 2725257,
+          "PopulationUrban": 2335866,
+          "PopulationRural": 389391,
+          "DistrictId": 7
         },
         {
           "Id": 73,
@@ -645,7 +877,10 @@
           "RegionRu": "Новосибирская область",
           "RegionEn": "Novosibirsk Oblast",
           "Income": 38472128,
-          "Population": 2746728
+          "Population": 2746728,
+          "PopulationUrban": 2156752,
+          "PopulationRural": 589976,
+          "DistrictId": 7
         },
         {
           "Id": 74,
@@ -653,7 +888,10 @@
           "RegionRu": "Омская область",
           "RegionEn": "Omsk Oblast",
           "Income": 52524102,
-          "Population": 1978514
+          "Population": 1978514,
+          "PopulationUrban": 1428156,
+          "PopulationRural": 550358,
+          "DistrictId": 7
         },
         {
           "Id": 75,
@@ -661,7 +899,10 @@
           "RegionRu": "Томская область",
           "RegionEn": "Tomsk Oblast",
           "Income": 89464552,
-          "Population": 1074294
+          "Population": 1074294,
+          "PopulationUrban": 772900,
+          "PopulationRural": 301394,
+          "DistrictId": 7
         },
         {
           "Id": 76,
@@ -669,7 +910,10 @@
           "RegionRu": "Забайкальский край",
           "RegionEn": "Zabaykalsky Krai",
           "Income": 445561,
-          "Population": 1087479
+          "Population": 1087479,
+          "PopulationUrban": 732769,
+          "PopulationRural": 354710,
+          "DistrictId": 7
         }
       ]
     },
@@ -679,6 +923,8 @@
       "DistrictEn": "Far Eastern Federal District",
       "Income": 111747354,
       "Population": 6211384,
+      "PopulationUrban": 4685760,
+      "PopulationRural": 1525624,      
       "Regions": [
         {
           "Id": 77,
@@ -686,7 +932,10 @@
           "RegionRu": "Республика Саха (Якутия)",
           "RegionEn": "Sakha Republic",
           "Income": 111747354,
-          "Population": 956712
+          "Population": 956712,
+          "PopulationUrban": 624635,
+          "PopulationRural": 332077,
+          "DistrictId": 8
         },
         {
           "Id": 78,
@@ -694,7 +943,10 @@
           "RegionRu": "Приморский край",
           "RegionEn": "Primorsky Krai",
           "Income": 50361465,
-          "Population": 1933446
+          "Population": 1933446,
+          "PopulationUrban": 1486546,
+          "PopulationRural": 446900,
+          "DistrictId": 8
         },
         {
           "Id": 79,
@@ -702,7 +954,10 @@
           "RegionRu": "Хабаровский край",
           "RegionEn": "Khabarovsk Krai",
           "Income": 11172443,
-          "Population": 1338626
+          "Population": 1338626,
+          "PopulationUrban": 1095315,
+          "PopulationRural": 243311,
+          "DistrictId": 8
         },
         {
           "Id": 80,
@@ -710,7 +965,10 @@
           "RegionRu": "Амурская область",
           "RegionEn": "Amur Oblast",
           "Income": 21813549,
-          "Population": 809814
+          "Population": 809814,
+          "PopulationUrban": 544924,
+          "PopulationRural": 264890,
+          "DistrictId": 8
         },
         {
           "Id": 81,
@@ -718,7 +976,10 @@
           "RegionRu": "Камчатский край",
           "RegionEn": "Kamchatka Krai",
           "Income": -12993494,
-          "Population": 317206
+          "Population": 317206,
+          "PopulationUrban": 245977,
+          "PopulationRural": 71229,
+          "DistrictId": 8
         },
         {
           "Id": 82,
@@ -726,7 +987,10 @@
           "RegionRu": "Магаданская область",
           "RegionEn": "Magadan Oblast",
           "Income": 2995251,
-          "Population": 148105
+          "Population": 148105,
+          "PopulationUrban": 141310,
+          "PopulationRural": 6795,
+          "DistrictId": 8
         },
         {
           "Id": 83,
@@ -734,7 +998,10 @@
           "RegionRu": "Сахалинская область",
           "RegionEn": "Sakhalin Oblast",
           "Income": -4943076,
-          "Population": 488308
+          "Population": 488308,
+          "PopulationUrban": 397300,
+          "PopulationRural": 91008,
+          "DistrictId": 8
         },
         {
           "Id": 84,
@@ -742,7 +1009,10 @@
           "RegionRu": "Еврейская автономная область",
           "RegionEn": "Jewish Autonomous Oblast",
           "Income": 42678298,
-          "Population": 168408
+          "Population": 168408,
+          "PopulationUrban": 114958,
+          "PopulationRural": 53450,
+          "DistrictId": 8
         },
         {
           "Id": 85,
@@ -750,7 +1020,10 @@
           "RegionRu": "Чукотский АО",
           "RegionEn": "Chukotka Autonomous Okrug",
           "Income": -202908,
-          "Population": 50759
+          "Population": 50759,
+          "PopulationUrban": 34795,
+          "PopulationRural": 15964,
+          "DistrictId": 8
         }
       ]
     }
